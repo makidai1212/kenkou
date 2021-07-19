@@ -10,7 +10,7 @@ FactoryBot.define do
 
   factory :rukawa, class: User do
     name {"rukawa"}
-    email {"rukawa@example.com"}
+    email {"rukawa@example.com" }
   end
 
   factory :akagi, class: User do
