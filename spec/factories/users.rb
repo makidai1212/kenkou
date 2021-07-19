@@ -1,3 +1,4 @@
+# fixtureみたいな感じ
 FactoryBot.define do
   factory :user do
     name {"sakuragi"}
