@@ -53,6 +53,7 @@ group :test do
   gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'shoulda-matchers'
 end
 
 group :production do
