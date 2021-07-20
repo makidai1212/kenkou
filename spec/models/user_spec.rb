@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
   end
   
   it "ユーザー登録は可能である" do
-    expect(@user).to be_valid
+    expect(build(:user)).to be_valid
   end
 
   it "名前がなければ登録できない" do
@@ -38,5 +38,22 @@ RSpec.describe User, type: :model do
         expect(FactoryBot.build(:user, email: invalid_address.inspect)).to_not be_valid
       end
   end
+
+  it "同じemailは登録できない" do
+    @user.save
+    duplicate_user = @user.dup
+    expect(duplicate_user).to_not be_valid
+  end
+
+  it "パスワードがなければ登録できない" do
+    @user.password = @user.password_confirmation = " " * 6
+    expect(@user).to_not be_valid
+  end
+
+  it "パスワードは最低6文字でなければ登録できない" do
+    @user.password = @user.password_confirmation = "a" * 5
+    expect(@user).to_not be_valid
+  end
+
 
 end

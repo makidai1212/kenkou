@@ -2,8 +2,9 @@
 FactoryBot.define do
   factory :user do
     name {"sakuragi"}
-    email {"sakuragi@example.com"}
-
+    email {"sakuragi@example.com" }
+    password { "foobar" }
+    password_confirmation { "foobar" }
     trait :invalid do
       name nil
     end
@@ -17,5 +18,6 @@ FactoryBot.define do
   factory :akagi, class: User do
     name {"akagi"}
     email {"akagi@example.com"}
+
   end
 end
