@@ -9,7 +9,22 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+$gray-medium-light: #eaeaea;
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* デバッグ情報 */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
 
 .bg-main{
     background-color: #563D7C;
