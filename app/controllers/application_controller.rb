@@ -1,6 +1,3 @@
 class ApplicationController < ActionController::Base
-  
-  def hello
-    render html: "忘れてた"
-  end
+  include SessionsHelper
 end
