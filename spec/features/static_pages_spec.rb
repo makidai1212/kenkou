@@ -1,3 +1,4 @@
+# 今後はFeature SpecではなくSystem Specを使う方が得策
 require 'rails_helper'
 
 describe 'Home' do
